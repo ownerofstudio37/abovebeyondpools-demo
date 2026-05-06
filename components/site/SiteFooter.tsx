@@ -1,5 +1,5 @@
-import { Waves } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function SiteFooter() {
   return (
@@ -8,12 +8,14 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-blue-600 text-white rounded-lg p-1.5">
-                <Waves className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="font-bold text-white leading-tight text-sm">Above & Beyond Pools</p>
-                <p className="text-[10px] text-blue-400 font-medium tracking-wide uppercase">& Spas</p>
+              <div className="rounded-md bg-white px-2 py-1">
+                <Image
+                  src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778062388/aboveandbeyond-logo_alqiyj.webp"
+                  alt="Above & Beyond Pools logo"
+                  width={180}
+                  height={56}
+                  className="h-10 w-auto"
+                />
               </div>
             </div>
             <p className="text-sm leading-relaxed max-w-xs">

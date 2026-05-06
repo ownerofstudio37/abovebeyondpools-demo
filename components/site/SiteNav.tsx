@@ -1,7 +1,8 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Phone, Waves } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const NAV = [
@@ -20,13 +21,14 @@ export function SiteNav() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="bg-blue-600 text-white rounded-lg p-1.5">
-              <Waves className="h-5 w-5" />
-            </div>
-            <div>
-              <p className="font-bold text-gray-900 leading-tight text-sm">Above & Beyond</p>
-              <p className="text-[10px] text-blue-600 font-medium tracking-wide uppercase leading-tight">Pools & Spas</p>
-            </div>
+            <Image
+              src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778062388/aboveandbeyond-logo_alqiyj.webp"
+              alt="Above & Beyond Pools logo"
+              width={180}
+              height={56}
+              priority
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
