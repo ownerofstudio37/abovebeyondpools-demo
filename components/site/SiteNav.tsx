@@ -6,11 +6,11 @@ import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const NAV = [
-  { label: 'About Us', href: '#team' },
-  { label: 'Services', href: '#services' },
+  { label: 'About Us', href: '/#team' },
+  { label: 'Services', href: '/services' },
   { label: 'Blog', href: '/admin/content/blog' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Gallery', href: '/#gallery' },
+  { label: 'Contact Us', href: '/#contact' },
 ]
 
 export function SiteNav() {
@@ -18,16 +18,16 @@ export function SiteNav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-t-2 border-t-blue-900 border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778062388/aboveandbeyond-logo_alqiyj.webp"
               alt="Above & Beyond Pools logo"
-              width={180}
-              height={56}
+              width={260}
+              height={80}
               priority
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
 

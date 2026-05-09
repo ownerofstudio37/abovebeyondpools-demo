@@ -1,10 +1,10 @@
 const IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80', alt: 'Resort inground pool with waterfall', span: 'col-span-2 row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80', alt: 'Luxury backyard pool', span: '' },
-  { src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80', alt: 'Pool at sunset', span: '' },
-  { src: 'https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=600&q=80', alt: 'Modern geometric pool', span: '' },
-  { src: 'https://images.unsplash.com/photo-1566024349612-89f5fce6a10d?w=600&q=80', alt: 'Spa and pool combo', span: '' },
-  { src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80', alt: 'Freeform lagoon pool', span: '' },
+  { src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302419/SERVICES-BG_ewnofq.jpg', alt: 'Clear blue resort-style pool water', span: 'col-span-2 row-span-2' },
+  { src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302428/High-Quality-Cleaning-bg-img_nuc791.jpg', alt: 'Sparkling clean swimming pool', span: '' },
+  { src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302444/stair-swimming-pool-beautiful-luxury-hotel-pool-resort_1339-5455_py3saj.jpg', alt: 'Luxury pool stair entry view', span: '' },
+  { src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302440/rain-drops-on-the-swimming-pool-_rw1qmm.jpg', alt: 'Water texture close-up', span: '' },
+  { src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302414/relaxing-in-the-pool_mophdw.jpg', alt: 'Relaxing in a clean pool', span: '' },
+  { src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302415/smiling-family-with-mature-parents-and-adult-offspring-on-summer-holiday-in-swimming-pool-on-airbed_jn3fhp.jpg', alt: 'Family enjoying pool day', span: '' },
 ]
 
 export function GallerySection() {

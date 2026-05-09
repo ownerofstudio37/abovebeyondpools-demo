@@ -7,13 +7,13 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-900">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-[url('https://res.cloudinary.com/dmjxho2rl/image/upload/v1778298225/IMG_20240305_115502670_HDR-2-scaled_twvc1r.jpg')] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-[url('https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302457/New-Project-5_igqiz5.jpg')] bg-cover bg-center bg-no-repeat"
       />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gray-900/50" />
       <div className="absolute inset-0 bg-linear-to-r from-gray-900/70 via-gray-900/45 to-transparent" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-28">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-28">
         <div className="max-w-3xl">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[0.95] mb-6 tracking-tight">
             Pool & Hot Tub

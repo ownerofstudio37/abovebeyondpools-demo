@@ -12,9 +12,9 @@ export function SiteFooter() {
                 <Image
                   src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778062388/aboveandbeyond-logo_alqiyj.webp"
                   alt="Above & Beyond Pools logo"
-                  width={180}
-                  height={56}
-                  className="h-10 w-auto"
+                  width={240}
+                  height={74}
+                  className="h-12 w-auto"
                 />
               </div>
             </div>

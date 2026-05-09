@@ -6,19 +6,19 @@ const SERVICES = [
   {
     icon: Waves,
     title: 'Weekly Pool Cleaning',
-    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778298224/IMG_20240227_095855132_HDR-2-scaled_yba91o.jpg',
+    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302412/pool-net-leaf-skimmer-rake-in-summer-_pgcyi0.jpg',
     desc: 'Maintain your pool effortlessly with weekly brushing, cleaner emptying, filter backwashing as needed, and chemical balancing.',
   },
   {
     icon: Thermometer,
     title: 'Hot Tub Drain & Refill',
-    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778299313/IMG_20240327_155955051-scaled-e1737003728212_drkzv0.jpg',
+    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302411/hot-tub-jacuzzi-fountain-and-skimmer-close-up_scnfmk.jpg',
     desc: 'Keep your hot tub fresh with scheduled drain and refill service. We typically recommend this every 6-8 months.',
   },
   {
     icon: Sparkles,
     title: 'One Time Clean',
-    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778298700/IMG_20260204_145326_hvezkq.jpg',
+    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302436/a-man-cleans-a-pool-on-a-hotel-grounds-in-a-tropical-climate-_sprhub.jpg',
     desc: 'Perfect when you need temporary help. We get your pool sparkling before guests arrive or while your schedule is packed.',
   },
 ]
@@ -60,8 +60,7 @@ export function ServicesSection() {
 
         <div className="text-center mt-12">
           <Link
-            href="https://abovebeyondpools.com/services/"
-            target="_blank"
+            href="/services"
             className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-8 py-4 text-gray-900 font-semibold hover:bg-yellow-300 transition-colors"
           >
             Explore all of our services and pricing <ArrowRight className="ml-2 h-4 w-4" />
