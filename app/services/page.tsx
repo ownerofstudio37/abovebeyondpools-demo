@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Check, Sparkles, Waves, Thermometer, Droplets, HandHelping, GraduationCap } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, Check, Sparkles, Waves, Thermometer, Droplets, HandHelping, GraduationCap, Wrench, Filter, Settings2 } from 'lucide-react'
 import { SiteNav } from '@/components/site/SiteNav'
 import { LeadCaptureForm } from '@/components/site/LeadCaptureForm'
 import { SiteFooter } from '@/components/site/SiteFooter'
@@ -75,12 +76,71 @@ const EXTRA_SERVICES = [
   },
 ]
 
+const REPAIR_SPECIALTY = [
+  {
+    icon: Wrench,
+    title: 'Repair Diagnostic',
+    price: '$125+',
+    description:
+      'With every pool repair, we perform a diagnostic visit to provide a personalized estimate. If approved, this fee is applied to the estimate total.',
+  },
+  {
+    icon: Filter,
+    title: 'Filter Cleans',
+    price: '$150+',
+    description:
+      'If you have a cartridge or DE filter, it requires a deep cleaning every 6 months. We can get you on a schedule automatically.',
+  },
+  {
+    icon: Settings2,
+    title: 'Sand Filter Change',
+    price: '$250+',
+    description:
+      'Sand filters usually need media replacement around every 2 years to maintain filtration performance and water clarity.',
+  },
+]
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       <SiteNav />
 
-      <section className="relative pt-28 pb-16 overflow-hidden">
+      <section className="relative pt-32 pb-24 overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302428/High-Quality-Cleaning-bg-img_nuc791.jpg"
+            alt="Pool service hero"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-blue-950/60" />
+          <div className="absolute inset-0 bg-linear-to-r from-blue-950/80 via-blue-950/55 to-transparent" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-blue-200 font-semibold text-sm uppercase tracking-wider mb-3">Our Services</p>
+            <h1 className="text-5xl sm:text-6xl font-extrabold text-white leading-tight mb-5">
+              Professional Pool & Hot Tub
+              <span className="text-yellow-400"> Service Plans</span>
+            </h1>
+            <p className="text-xl text-white/90 max-w-2xl leading-relaxed">
+              Whether you need full weekly care or one-time help, we offer reliable service options tailored to your pool and spa.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link href="#service-pricing" className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-7 py-3 text-gray-900 font-semibold hover:bg-yellow-300 transition-colors">
+                View Service Pricing <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <a href="tel:+15124150266" className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3 text-white font-medium backdrop-blur-sm hover:bg-white/15 transition-colors">
+                (512) 415-0266
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service-pricing" className="relative pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image
             src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302419/SERVICES-BG_ewnofq.jpg"
@@ -138,6 +198,50 @@ export default function ServicesPage() {
               )
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-blue-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-bold text-sky-400">Repair & Specialty</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {REPAIR_SPECIALTY.map((service) => {
+              const Icon = service.icon
+              return (
+                <article key={service.title} className="rounded-2xl bg-white/95 p-7 border border-blue-100 shadow-sm">
+                  <Icon className="h-7 w-7 text-sky-400 mb-4" />
+                  <h3 className="text-2xl font-bold text-blue-900">{service.title}</h3>
+                  <p className="text-4xl font-extrabold text-blue-800 mt-2">{service.price}</p>
+                  <p className="text-sm text-gray-700 mt-4 leading-relaxed">{service.description}</p>
+                </article>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302409/pool_calvkd.jpg"
+            alt="Pool water background"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-blue-900/55" />
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl font-bold text-white mb-5">Need a Custom Service? Contact Us Today!</h2>
+          <p className="text-white/90 text-lg max-w-3xl mx-auto">
+            If you are needing any other specialty service, please reach out to us. We offer such a wide range of services, we couldn&apos;t fit them all on this list.
+          </p>
+          <Link href="#contact" className="inline-flex mt-8 rounded-full bg-yellow-400 px-8 py-3 text-gray-900 font-semibold hover:bg-yellow-300 transition-colors">
+            Get in touch with us!
+          </Link>
         </div>
       </section>
 
