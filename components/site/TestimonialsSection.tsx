@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Star } from 'lucide-react'
 
 const TESTIMONIALS = [
@@ -37,36 +38,56 @@ const TESTIMONIALS = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-gray-900">
+    <section className="py-24 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-blue-400 font-semibold text-sm uppercase tracking-wider mb-2">Reviews</p>
-          <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-          <div className="flex items-center justify-center gap-1">
-            {[1,2,3,4,5].map(i => <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />)}
-            <span className="text-gray-300 ml-2 text-sm">Trusted by pool and spa owners across greater Austin</span>
+          <p className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-2">Reviews</p>
+          <h2 className="text-5xl font-bold text-blue-900 mb-4">What Our Clients are Saying</h2>
+          <div className="mx-auto max-w-xs rounded-3xl bg-white border border-gray-200 shadow-sm p-6">
+            <div className="relative h-48 w-full mb-4">
+              <Image
+                src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778298224/CC25_Austin_Winner_vrmieo.jpg"
+                alt="2025 Community's Choice Award Winner badge"
+                fill
+                className="object-contain"
+                sizes="320px"
+              />
+            </div>
+            <p className="text-3xl font-black text-gray-900">EXCELLENT</p>
+            <div className="flex items-center justify-center gap-1 mt-2">
+              {[1,2,3,4,5].map(i => <Star key={i} className="h-6 w-6 text-yellow-500 fill-yellow-500" />)}
+            </div>
+            <p className="text-sm text-gray-600 mt-2">Based on 34 reviews</p>
+            <p className="text-4xl font-semibold tracking-tight mt-2">
+              <span className="text-blue-500">G</span>
+              <span className="text-red-500">o</span>
+              <span className="text-yellow-500">o</span>
+              <span className="text-blue-500">g</span>
+              <span className="text-green-500">l</span>
+              <span className="text-red-500">e</span>
+            </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
           {TESTIMONIALS.map(t => (
-            <div key={t.name} className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+            <article key={t.name} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
               <div className="flex gap-1 mb-4">
                 {Array(t.rating).fill(0).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                  <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
                 ))}
               </div>
-              <p className="text-gray-200 leading-relaxed mb-6 text-sm">&ldquo;{t.text}&rdquo;</p>
+              <p className="text-gray-700 leading-relaxed mb-6 text-sm">&ldquo;{t.text}&rdquo;</p>
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
                   {t.avatar}
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{t.name}</p>
-                  <p className="text-gray-400 text-xs">{t.location} &middot; {t.project}</p>
+                  <p className="text-gray-900 font-semibold text-sm">{t.name}</p>
+                  <p className="text-gray-500 text-xs">{t.location} &middot; {t.project}</p>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

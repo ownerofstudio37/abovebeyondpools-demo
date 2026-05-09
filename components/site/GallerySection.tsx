@@ -12,10 +12,10 @@ export function GallerySection() {
     <section id="gallery" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-2">Our Portfolio</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Pools We&apos;re Proud Of</h2>
+          <p className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-2">Before & After</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Witness the Stunning Results</h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            Every pool tells a story. Here are a few of our recent projects across the Phoenix metro area.
+            Check out these examples to see how we revitalize pools and hot tubs, making them clean, clear, and swim-ready.
           </p>
         </div>
 

@@ -2,21 +2,21 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const NAV = [
-  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '#team' },
   { label: 'Services', href: '#services' },
+  { label: 'Blog', href: '/admin/content/blog' },
   { label: 'Gallery', href: '#gallery' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact Us', href: '#contact' },
 ]
 
 export function SiteNav() {
   const [open, setOpen] = useState(false)
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-t-2 border-t-blue-900 border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -41,13 +41,13 @@ export function SiteNav() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+15124150266" className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-blue-600 transition-colors">
-              <Phone className="h-4 w-4" />
-              (512) 415-0266
-            </a>
-            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-              Book Service
+          <div className="hidden md:flex items-center">
+            <Button
+              size="sm"
+              className="rounded-full px-6 bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-semibold"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              REQUEST A QUOTE
             </Button>
           </div>
 
@@ -66,7 +66,16 @@ export function SiteNav() {
               {n.label}
             </Link>
           ))}
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 mt-2">Book Service</Button>
+          <Button
+            className="w-full mt-2 rounded-full bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-semibold"
+            onClick={() => {
+              setOpen(false)
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
+            REQUEST A QUOTE
+          </Button>
+          <a href="tel:+15124150266" className="block text-sm text-gray-600 pt-1">(512) 415-0266</a>
         </div>
       )}
     </header>
