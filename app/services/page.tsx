@@ -138,6 +138,15 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
+
+        <div className="pointer-events-none absolute bottom-0 inset-x-0 z-10">
+          <svg viewBox="0 0 1440 120" className="w-full h-auto text-gray-50" preserveAspectRatio="none">
+            <path
+              fill="currentColor"
+              d="M0,72L60,82.7C120,93,240,115,360,112C480,109,600,83,720,82.7C840,83,960,109,1080,112C1200,115,1320,93,1380,82.7L1440,72L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
+            ></path>
+          </svg>
+        </div>
       </section>
 
       <section id="service-pricing" className="relative pt-20 pb-16 overflow-hidden">
