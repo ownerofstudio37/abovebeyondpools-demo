@@ -106,7 +106,7 @@ export default function ServicesPage() {
       <SiteNav />
 
       <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 z-0">
           <Image
             src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302428/High-Quality-Cleaning-bg-img_nuc791.jpg"
             alt="Pool service hero"
@@ -114,11 +114,11 @@ export default function ServicesPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-blue-950/60" />
-          <div className="absolute inset-0 bg-linear-to-r from-blue-950/80 via-blue-950/55 to-transparent" />
+          <div className="absolute inset-0 bg-blue-950/35" />
+          <div className="absolute inset-0 bg-linear-to-r from-blue-950/55 via-blue-950/30 to-transparent" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-blue-200 font-semibold text-sm uppercase tracking-wider mb-3">Our Services</p>
             <h1 className="text-5xl sm:text-6xl font-extrabold text-white leading-tight mb-5">
@@ -224,17 +224,17 @@ export default function ServicesPage() {
       </section>
 
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 z-0">
           <Image
             src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1778302409/pool_calvkd.jpg"
             alt="Pool water background"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-blue-900/55" />
+          <div className="absolute inset-0 bg-blue-900/40" />
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl font-bold text-white mb-5">Need a Custom Service? Contact Us Today!</h2>
           <p className="text-white/90 text-lg max-w-3xl mx-auto">
             If you are needing any other specialty service, please reach out to us. We offer such a wide range of services, we couldn&apos;t fit them all on this list.
